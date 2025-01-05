@@ -63,6 +63,7 @@ const CoursePage = () => {
         if(course.content){
             if(course.content.startsWith("data:image")) return <img alt="content" className={classes.content} src={`${course.content}`}></img>
             else if(course.content.startsWith("data:video")) return <video alt="content" className={classes.content} src={`${course.content}`} controls></video>
+            // Replace iframe with this library https://www.npmjs.com/package/@justinribeiro/lite-youtube
             else return <iframe title="Content" className={classes.content} src={`${course.content}`}></iframe>
         }
         else{
